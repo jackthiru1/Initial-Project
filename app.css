@@ -4,12 +4,48 @@ html {
     font-family: 'Open Sans' Sans-Serif;
 }
 
+* { /* ! */
+    box-sizing: inherit;
+}
+
 body {
-    background-color: #60a9ff;
+    background-color: #c7e1ff;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    flex-direction:column;
+}
+header {
+    display: flex;
+    flex-direction: column;
+
+}
+.nav-bar-items {
+    list-style-type: none;
+    background-color: #f5ff2f;
+    text-align: center;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 300px;
+    border-radius: 15px;
+}
+
+.nav-item {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    padding:35px;
+    border-radius: 10px;
+}
+.business-intro {
+    font-size: 25px;
+    display:flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
 }
 
 .panel {
@@ -17,7 +53,6 @@ body {
     border-radius: 10px;
     padding: 15px 25px;
     width: 100%;
-    max-width: 960px;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -26,6 +61,7 @@ body {
 
 .pricing-plan {
     border-bottom: 1px solid #e1f1ff;
+    box-shadow: 20px 20px 50px grey;
 }
 
 .pricing-plan:last-child {
@@ -83,17 +119,62 @@ body {
     background-color: #e1f1ff;
 }
 
+
+.form-table {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px 25px;
+    display:flex;
+    flex-flow: column nowrap;
+}
+.form {
+    display: flex;
+    flex-flow: row wrap;
+
+}
+.button {
+    margin-left: 60px;
+
+}
+
 @media (min-width: 900px){
+    
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-bar-items{
+        display: flex;
+        flex-direction: row;
+    }
+
     .panel {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap; /* ! */
+        justify-content: space-evenly; /* ! */
+        max-width: 960px;
+       
     }
     .pricing-plan{
         border-bottom: none;
         border-right: 1px solid #e1f1ff;
         padding: 25px 50px;
+        width: 48%; /* ! */
+
     }
     .pricing-plan:last-child {
         border-right: none;
     }
+
+}
+
+@media (min-width: 1280px) {  /* ! */
+    .pricing-plan {
+        width: 32%;
     }
+
+    .panel {
+        max-width: 80%; 
+    }
+}
