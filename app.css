@@ -19,9 +19,14 @@ body {
 header {
     display: flex;
     flex-direction: column;
+}
+
+.heading {
+    margin-left: 10%;
+    padding-top: 30px;
+}
 
     /* Nav Bar */
-}
 .nav-bar-items {
     list-style-type: none;
     background-color: #f5ff2f;
